@@ -1,0 +1,51 @@
+@import '../../../global.scss';
+
+.todoItem {
+  padding: 1.6rem 2rem;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid var(--divider-color);
+
+  &:last-child {
+    border: none;
+  }
+
+  @include s-md {
+    padding: 2rem 2.4rem;
+  }
+
+  &:hover > &__deleteButton {
+    opacity: 1;
+  }
+
+  &__deleteButton {
+    $deleteButton: 1.2rem;
+    $deleteButtonMd: 1.8rem;
+
+    display: block;
+    margin: -2rem -1rem -2rem 3.4rem;
+    padding: 2rem;
+    width: $deleteButton;
+    height: $deleteButton;
+    border: none;
+    background-color: transparent;
+    background-image: url('../../../assets/icon-cross.svg');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: $deleteButton;
+    outline: none;
+    cursor: pointer;
+    opacity: 0;
+    transition: opacity 0.2s;
+
+    @include s-md {
+      width: $deleteButtonMd;
+      height: $deleteButtonMd;
+      background-size: $deleteButtonMd;
+    }
+
+    img {
+      width: 100%;
+    }
+  }
+}

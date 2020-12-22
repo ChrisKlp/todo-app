@@ -1,0 +1,23 @@
+@import '../../../../global.scss';
+
+.filter {
+  font-size: 1.4rem;
+  line-height: 1.4rem;
+  letter-spacing: -0.0194444rem;
+  color: var(--nav-color);
+  font-weight: 700;
+  background: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  transition: color 0.2s;
+
+  &:hover {
+    color: var(--new-todo-color);
+  }
+}
+
+.active {
+  color: $color-bright-blue;
+  pointer-events: none;
+}

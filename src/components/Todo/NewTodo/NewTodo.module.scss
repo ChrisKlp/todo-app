@@ -1,0 +1,42 @@
+@import '../../../global.scss';
+
+.newTodo {
+  display: flex;
+  padding: 1.4rem 2rem;
+  background-color: var(--content-bg-color);
+  box-shadow: 0 3.5rem 5rem -1.5rem rgba(0, 0, 0, 0.5);
+  border-radius: 0.5rem;
+
+  @include s-md {
+    padding: 2rem 2.4rem;
+  }
+
+  &__checkBorder {
+    margin-right: 1.2rem;
+    width: 2rem;
+    height: 2rem;
+    border: 1px solid var(--nav-color);
+    border-radius: 50%;
+    pointer-events: none;
+
+    @include s-md {
+      width: 2.4rem;
+      height: 2.4rem;
+      margin-right: 2.4rem;
+    }
+  }
+
+  &__input {
+    @extend %todoName;
+
+    flex-grow: 1;
+    color: var(--new-todo-color);
+    border: none;
+    background: none;
+    outline: none;
+
+    &::placeholder {
+      color: var(--nav-color);
+    }
+  }
+}

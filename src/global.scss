@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap');
+
+$font-body: 'Josefin Sans', sans-serif;
+
+$color-bright-blue: hsl(220, 98%, 61%);
+$gradient-check: linear-gradient(hsl(192, 100%, 67%), hsl(280, 87%, 65%));
+$color-white: hsl(0, 0%, 100%);
+
+:root {
+  --bg-color: hsl(235, 21%, 11%);
+  --content-bg-color: hsl(235, 24%, 19%);
+
+  --new-todo-color: hsl(236, 32%, 92%);
+  --active-todo-color: hsl(235, 39%, 85%);
+  --completed-todo-color: hsl(233, 14%, 35%);
+  --nav-color: hsl(235, 16%, 43%);
+  --divider-color: hsl(235, 14%, 26%);
+
+  background-color: var(--bg-color);
+  min-height: 100vh;
+}
+
+:root.themeLight {
+  --bg-color: hsl(0, 0%, 98%);
+  --content-bg-color: hsl(0, 0%, 100%);
+
+  --new-todo-color: hsl(235, 14%, 26%);
+  --active-todo-color: hsl(235, 19%, 35%);
+  --completed-todo-color: hsl(233, 11%, 84%);
+  --nav-color: hsl(235, 9%, 61%);
+  --divider-color: hsl(236, 32%, 92%);
+}
+
+@mixin s-sm {
+  @media (min-width: 576px) {
+    @content;
+  }
+}
+
+@mixin s-md {
+  @media (min-width: 768px) {
+    @content;
+  }
+}
+
+@mixin s-lg {
+  @media (min-width: 992px) {
+    @content;
+  }
+}
+
+@mixin s-xlg {
+  @media (min-width: 1200px) {
+    @content;
+  }
+}
+
+%wrapper {
+  padding: 0 2.4rem;
+  margin: 0 auto;
+  max-width: 54rem;
+
+  @include s-md {
+    padding: 0;
+  }
+}
+
+%todoName {
+  font-size: 1.2rem;
+  line-height: 1.2rem;
+  letter-spacing: -0.0166667rem;
+
+  @include s-md {
+    font-size: 1.8rem;
+    line-height: 1.8rem;
+    letter-spacing: -0.025rem;
+  }
+}

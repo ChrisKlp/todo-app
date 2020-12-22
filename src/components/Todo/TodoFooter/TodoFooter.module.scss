@@ -1,0 +1,70 @@
+@import '../../../global.scss';
+
+.footer {
+  @include s-md {
+    display: grid;
+    grid-template: 1fr / 1fr;
+    border-top: 1px solid var(--divider-color);
+  }
+
+  &__options {
+    display: flex;
+    justify-content: space-between;
+    padding: 1.6rem 2rem 2rem;
+    background-color: var(--content-bg-color);
+    box-shadow: 0 3.5rem 5rem -1.5rem rgba(0, 0, 0, 0.5);
+    border-radius: 0 0 0.5rem 0.5rem;
+
+    @include s-md {
+      grid-area: 1 / 1 / 2/ 2;
+      padding: 1.6rem 2rem;
+    }
+  }
+  &__optionsCounter {
+    font-size: 1.2rem;
+    line-height: 1.2rem;
+    letter-spacing: -0.0166667rem;
+    color: var(--nav-color);
+
+    @include s-md {
+      font-size: 1.4rem;
+      line-height: 1.4rem;
+      letter-spacing: -0.0194444rem;
+    }
+  }
+
+  &__optionsClearBtn {
+    @extend .footer__optionsCounter;
+
+    margin: -1rem;
+    padding: 1rem;
+    border: none;
+    background: transparent;
+    outline: none;
+    cursor: pointer;
+    transition: color 0.2s;
+
+    &:hover {
+      color: var(--new-todo-color);
+    }
+  }
+
+  &__nav {
+    margin-top: 1.6rem;
+    display: flex;
+    justify-content: center;
+    gap: 1.8rem;
+    padding: 1.5rem 0 1.9rem;
+    background-color: var(--content-bg-color);
+    box-shadow: 0 3.5rem 5rem -1.5rem rgba(0, 0, 0, 0.5);
+    border-radius: 0.5rem;
+
+    @include s-md {
+      margin-top: 0;
+      grid-area: 1 / 1 / 2 / 2;
+      padding: 1.6rem 2rem;
+      background-color: transparent;
+      box-shadow: none;
+    }
+  }
+}

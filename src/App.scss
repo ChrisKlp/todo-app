@@ -1,0 +1,36 @@
+@import './global.scss';
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  min-width: 32rem;
+  font: 1.8rem $font-body;
+  background-color: var(--bg-color);
+}
+
+a {
+  text-decoration: none;
+}
+
+ul,
+li {
+  list-style: none;
+}
+
+button,
+input,
+input::placeholder {
+  font-family: inherit;
+  font-size: inherit;
+}

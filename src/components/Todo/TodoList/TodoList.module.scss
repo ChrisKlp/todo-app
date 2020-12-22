@@ -1,0 +1,19 @@
+@import '../../../global.scss';
+
+.todoList {
+  margin-top: 1.6rem;
+  background-color: var(--content-bg-color);
+  box-shadow: 0 3.5rem 5rem -1.5rem rgba(0, 0, 0, 0.5);
+  border-radius: 0.5rem 0.5rem 0 0;
+
+  @include s-md {
+    margin-top: 2.4rem;
+  }
+}
+// .SortableHelper {
+//   box-shadow: 0 5px 5px -5px rgba(0, 0, 0, 0.2),
+//     0 -5px 5px -5px rgba(0, 0, 0, 0.2);
+//   background-color: rgba(255, 255, 255, 0.8);
+//   cursor: row-resize;
+//   color: var(--active-todo-color) !important;
+// }
