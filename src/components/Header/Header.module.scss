@@ -19,6 +19,10 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    @include s-md {
+      padding-top: 7rem;
+    }
   }
 
   &__logo {

@@ -16,5 +16,9 @@
     text-align: center;
     letter-spacing: -0.0194444rem;
     color: var(--nav-color);
+
+    @include s-md {
+      padding-top: 4.9rem;
+    }
   }
 }
