@@ -7,6 +7,7 @@
   margin: -1.6rem -2rem;
   align-items: center;
   cursor: pointer;
+  overflow: hidden;
 
   &:hover {
     .todo__checkbox::before {
@@ -20,24 +21,21 @@
   }
 
   &__checkbox {
+    $checkbox-size: 2rem;
+    $checkbox-sizeMd: 2.4rem;
+
+    align-self: flex-start;
+    flex-shrink: 0;
     position: relative;
     margin-right: 1.2rem;
-    display: grid;
-    place-items: center;
-    width: 2rem;
-    height: 2rem;
+    width: $checkbox-size;
+    height: $checkbox-size;
     background-color: var(--nav-color);
     border: none;
     border-radius: 50%;
     outline: none;
     overflow: hidden;
     cursor: pointer;
-
-    @include s-md {
-      width: 2.4rem;
-      height: 2.4rem;
-      margin-right: 2.4rem;
-    }
 
     &::before {
       position: absolute;
@@ -62,6 +60,11 @@
       border-radius: 50%;
       background-color: var(--content-bg-color);
       content: '';
+    }
+    @include s-md {
+      width: $checkbox-sizeMd;
+      height: $checkbox-sizeMd;
+      margin-right: $checkbox-sizeMd;
     }
   }
 

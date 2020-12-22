@@ -30,6 +30,7 @@ const NewTodo = () => {
         placeholder="Create a new todo…"
         aria-label="Task name"
       />
+      <button type="submit" className={style.newTodo__subbmitBtn}>Add</button>
     </form>
   );
 };
