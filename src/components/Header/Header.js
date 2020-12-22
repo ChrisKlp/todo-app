@@ -12,7 +12,7 @@ const Header = () => {
   };
 
   return (
-    <header className={`${style.header} ${!isThemeDark && style.lightHeader }`}>
+    <header className={`${style.header} ${!isThemeDark && style.lightHeader}`}>
       <div className={style.header__wrapper}>
         <h1 className={style.header__logo}>Todo</h1>
         <button
@@ -20,7 +20,7 @@ const Header = () => {
           onClick={handleThemeChange}
           aria-label="Theme Toggle"
         >
-          <img src={isThemeDark ? iconMoon : iconSun} alt="Theme Toggle Icon" />
+          <img src={isThemeDark ? iconSun : iconMoon} alt="Theme Toggle Icon" />
         </button>
       </div>
     </header>
